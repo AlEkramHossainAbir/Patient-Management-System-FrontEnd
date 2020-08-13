@@ -29,7 +29,7 @@ class Navbar extends Component {
             </ul>{" "}
           </li>
           <li>
-            <a href="../Layout">Contact</a>
+            <a href="#">Contact</a>
             <ul>
               <li>
                 <a href="#">Map</a>
@@ -46,7 +46,7 @@ class Navbar extends Component {
             <a href="../doctorslist">Doctor's Information</a>
           </li>
           <li>
-            <a href="../doctorslist">Appointement</a>
+            <a href="../Layout">Appointement</a>
             <ul>
               <li>
                 <a href="#">Online</a>
