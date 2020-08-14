@@ -198,40 +198,44 @@ class Doctor extends Component {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="card">
-            <img src="Screenshot_4.png" alt="nurse" className="cardimage"></img>
-            <img src="robin.jpg" alt="Robin" className="profileimage"></img>
-            <h1>Robin</h1>
-            <p className="job-title">Psychiatrist</p>
-            <p className="about">
-              jkh dslhj dskljsa lkfjdslkf l jlsfjs jsldkjf
-            </p>
-            <a href="#" className="btn">
-              View Profile
-            </a>
-            <ul className="socialMedia">
-              <li>
-                <a href="#">
-                  <i className="fab fa-facebook-square"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-twitter-square"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-google-plus-square"></i>
-                </a>
-              </li>
-            </ul>
+            <div className="card">
+              <img
+                src="Screenshot_4.png"
+                alt="nurse"
+                className="cardimage"
+              ></img>
+              <img src="robin.jpg" alt="Robin" className="profileimage"></img>
+              <h1>Robin</h1>
+              <p className="job-title">Psychiatrist</p>
+              <p className="about">
+                jkh dslhj dskljsa lkfjdslkf l jlsfjs jsldkjf
+              </p>
+              <a href="#" className="btn">
+                View Profile
+              </a>
+              <ul className="socialMedia">
+                <li>
+                  <a href="#">
+                    <i className="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-twitter-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fab fa-google-plus-square"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
