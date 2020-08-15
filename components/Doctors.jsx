@@ -10,11 +10,15 @@ class Doctor extends Component {
           <div className="card-wrapper">
             <div className="card">
               <img
-                src="/blood-pressure.jpg"
+                src="/image/blood-pressure.jpg"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="/abir.jpg" alt="Abir" className="profileimage"></img>
+              <img
+                src="/image/abir.jpg"
+                alt="Abir"
+                className="profileimage"
+              ></img>
               <h1>Abir</h1>
               <p className="job-title">Psychiatrist</p>
               <p className="about">
@@ -48,11 +52,15 @@ class Doctor extends Component {
             </div>
             <div className="card">
               <img
-                src="/Screenshot_1.png"
+                src="/image/Screenshot_1.png"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="/proma.jpg" alt="Proma" className="profileimage"></img>
+              <img
+                src="/image/proma.jpg"
+                alt="Proma"
+                className="profileimage"
+              ></img>
               <h1>Lamiya</h1>
               <p className="job-title">Counselor</p>
               <p className="about">
@@ -86,11 +94,15 @@ class Doctor extends Component {
             </div>
             <div className="card">
               <img
-                src="/Screenshot_4.png"
+                src="/image/Screenshot_4.png"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="nahid.jpg" alt="Nahid" className="profileimage"></img>
+              <img
+                src="/image/nahid.jpg"
+                alt="Nahid"
+                className="profileimage"
+              ></img>
               <h1>Salekin</h1>
               <p className="job-title">Neurologist</p>
               <p className="about">
@@ -124,11 +136,15 @@ class Doctor extends Component {
             </div>
             <div className="card">
               <img
-                src="Screenshot_1.png"
+                src="/image/Screenshot_1.png"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="pranto.jpg" alt="Pranto" className="profileimage"></img>
+              <img
+                src="/image/pranto.jpg"
+                alt="Pranto"
+                className="profileimage"
+              ></img>
               <h1>Pranto</h1>
               <p className="job-title">Medicine Specialist</p>
               <p className="about">
@@ -162,11 +178,15 @@ class Doctor extends Component {
             </div>
             <div className="card">
               <img
-                src="Screenshot_4.png"
+                src="/image/Screenshot_4.png"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="/jubu2.jpg" alt="Jubair" className="profileimage"></img>
+              <img
+                src="/image/jubu2.jpg"
+                alt="Jubair"
+                className="profileimage"
+              ></img>
               <h1>Jubair</h1>
               <p className="job-title">Counselor</p>
               <p className="about">
@@ -200,11 +220,15 @@ class Doctor extends Component {
             </div>
             <div className="card">
               <img
-                src="Screenshot_4.png"
+                src="/image/Screenshot_4.png"
                 alt="nurse"
                 className="cardimage"
               ></img>
-              <img src="robin.jpg" alt="Robin" className="profileimage"></img>
+              <img
+                src="/image/robin.jpg"
+                alt="Robin"
+                className="profileimage"
+              ></img>
               <h1>Robin</h1>
               <p className="job-title">Psychiatrist</p>
               <p className="about">

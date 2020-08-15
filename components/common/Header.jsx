@@ -39,7 +39,7 @@ export default class Header extends React.Component {
         </Head>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="logo">
-            <img src="/stethoscope.svg"></img>
+            <img src="/image/stethoscope.svg"></img>
           </div>
 
           <a className="navbar-brand" href="http://localhost:3000/">

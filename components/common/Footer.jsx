@@ -13,9 +13,9 @@ class Footer extends Component {
             </p>
             <div className="social-media">
               <h2>Contact Us</h2>
-              <img src="/facebook.svg"></img>
-              <img src="/instagram.svg"></img>
-              <img src="/youtube.svg"></img>
+              <img src="/image/facebook.svg"></img>
+              <img src="/image/instagram.svg"></img>
+              <img src="/image/youtube.svg"></img>
             </div>
           </div>
           <div className="footer-items">
@@ -72,22 +72,22 @@ class Footer extends Component {
           </div>
         </div>
         <script
-          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          src="/imagehttps://code.jquery.com/jquery-3.5.1.slim.min.js"
           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
           crossorigin="anonymous"
         ></script>
         <script
-          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+          src="/imagehttps://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
           integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
           crossorigin="anonymous"
         ></script>
         <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+          src="/imagehttps://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
           integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
           crossorigin="anonymous"
         ></script>
         <script
-          src="https://kit.fontawesome.com/5d1697f880.js"
+          src="/imagehttps://kit.fontawesome.com/5d1697f880.js"
           crossorigin="anonymous"
         ></script>
       </footer>
