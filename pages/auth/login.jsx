@@ -1,5 +1,4 @@
 import Mylayout from "../../components/Mylayouts";
-import Navbar from "../../components/common/Navbar";
 import Login from "../../components/auth/Login";
 import React, { Component } from "react";
 class LoginPage extends Component {
@@ -8,7 +7,6 @@ class LoginPage extends Component {
     return (
       <>
         <Mylayout>
-          <Navbar />
           <Login></Login>
         </Mylayout>
       </>
