@@ -21,9 +21,9 @@ class Footer extends Component {
           <div className="footer-items">
             <p>About Us</p>
             <ul>
-              <li>jdf</li>
-              <li>fhdjfhs</li>
-              <li>sdjdfhjs</li>
+              <li>Our Company</li>
+              <li>Security</li>
+              <li>Legal</li>
             </ul>
           </div>
           <div className="footer-items">
