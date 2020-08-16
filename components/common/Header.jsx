@@ -5,6 +5,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
 import Ribbon from "antd/lib/badge/Ribbon";
+import Footer from "./Footer";
 const { Search } = Input;
 
 const suffix = (
