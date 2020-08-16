@@ -363,9 +363,6 @@ section {
   }
 }
 @media only screen and (max-width: 990px) {
-  .navbar-nav .nav-item .nav-link {
-    color: #00121b;
-  }
   .footer-items {
     width: 100%;
   }
@@ -376,11 +373,6 @@ section {
 }
 
 @media only screen and (max-width: 1200px) {
-  .logo a {
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-size: 20px;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up)*/
