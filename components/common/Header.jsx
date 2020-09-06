@@ -43,7 +43,7 @@ export default class Header extends React.Component {
             <img src="/image/stethoscope.svg"></img>
           </div>
 
-          <a className="navbar-brand" href="http://localhost:3000/">
+          <a className="navbar-brand" href="/">
             Counselling Management System
           </a>
           <button
@@ -58,7 +58,7 @@ export default class Header extends React.Component {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link" href="../Layout">
                   Features
@@ -134,6 +134,7 @@ export default class Header extends React.Component {
                 </a>
               </li>
               <Search
+                className="search"
                 style={{ float: "right", width: "25%" }}
                 placeholder="input search text"
                 enterButton="Search"

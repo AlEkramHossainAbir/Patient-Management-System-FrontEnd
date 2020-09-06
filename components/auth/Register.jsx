@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { accountRegistration } from "../../services/authService";
 import {
   Form,
   Input,
@@ -49,8 +50,10 @@ const tailFormItemLayout = {
 const RegistrationForm = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     console.log("Received values of form: ", values);
+    let authService = await accountRegistration(values);
+    console.log("Auth Service", authService);
   };
 
   const prefixSelector = (
@@ -94,7 +97,7 @@ const RegistrationForm = () => {
       scrollToFirstError
     >
       <Form.Item
-        name="name"
+        name="fullName"
         label="Full Name"
         rules={[
           {
@@ -108,7 +111,7 @@ const RegistrationForm = () => {
       </Form.Item>
 
       <Form.Item
-        name="email"
+        name="emailAddress"
         label="E-mail"
         rules={[
           {

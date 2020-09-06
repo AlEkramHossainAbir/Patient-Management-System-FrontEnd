@@ -366,6 +366,9 @@ section {
   .footer-items {
     width: 100%;
   }
+  .navbar .search {
+    display: none;
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
