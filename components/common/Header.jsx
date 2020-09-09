@@ -91,8 +91,11 @@ export default class Header extends React.Component {
                   <a className="dropdown-item" href="#">
                     Project Purpose
                   </a>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="../conditions">
                     Resources
+                  </a>
+                  <a className="dropdown-item" href="../treatment">
+                    Treatment
                   </a>
                   <a className="dropdown-item" href="#">
                     Mission & Vision
