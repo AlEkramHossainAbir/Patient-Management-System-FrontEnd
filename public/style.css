@@ -397,13 +397,16 @@ section {
   background-color: rgba(228, 252, 244, 0.781);
 }
 .conditions,
-.treatment {
+.treatment,
+.advice {
   margin: 0 auto;
   padding: 0;
   font-size: 18px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-.conditions h2 {
+.conditions h2,
+.treatment h2,
+.advice h2 {
   text-align: center;
 }
 .wrap {
@@ -430,4 +433,21 @@ table {
 }
 tr {
   width: auto;
+}
+.content-advice {
+  padding: 10px 10px;
+  margin-top: 2rem;
+  width: auto;
+  height: auto;
+  flex-grow: 1;
+  flex-basis: 300px;
+  flex-shrink: 1;
+}
+.content-advice a {
+  color: green;
+  float: left;
+  margin-top: 2rem;
+}
+.content-advice img {
+  height: 15rem;
 }

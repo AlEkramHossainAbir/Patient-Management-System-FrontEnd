@@ -7,4 +7,10 @@ module.exports = {
       data: params,
     });
   },
+  accountLogin: async function (params) {
+    return request("/auth/login", {
+      method: "PUT",
+      data: params,
+    });
+  },
 };

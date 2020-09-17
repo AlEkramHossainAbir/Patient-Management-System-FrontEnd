@@ -1,4 +1,6 @@
 import { Form, Input, Button, Checkbox } from "antd";
+import { Modal, Space } from "antd";
+import { accountLogin } from "../../services/authService";
 const layout = {
   labelCol: {
     span: 8,
@@ -15,8 +17,40 @@ const tailLayout = {
 };
 
 const Demo = () => {
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     console.log("Success:", values);
+    const loginRes = await accountLogin(values);
+    const resMsg = loginRes.hasOwnProperty("data")
+      ? loginRes.data.message
+      : "Invalid User";
+
+    console.log(resMsg);
+    console.log(loginRes);
+    if (resMsg == "email verification necessary") {
+      localStorage.setItem("token", loginRes.data.token);
+      localStorage.setItem("me", loginRes.data.user);
+      window.location.href = "/";
+    } else if (resMsg == "Invalid Password") {
+      Modal.error({
+        title: "This is an error message",
+        content: "You are trying to input Invalid Password",
+      });
+
+      //   Modal.warning({
+      //     title: "This is a warning message",
+      //     content: "some messages...some messages...",
+      //   });
+    } else if (resMsg == "Username not found") {
+      Modal.error({
+        title: "This is an error message",
+        content: "Username not found",
+      });
+    } else {
+      Modal.error({
+        title: "This is an error message",
+        content: "Try To login again",
+      });
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -36,8 +70,8 @@ const Demo = () => {
       onFinishFailed={onFinishFailed}
     >
       <Form.Item
-        label="Username"
-        name="username"
+        label="Email"
+        name="emailAddress"
         rules={[
           {
             required: true,
@@ -69,6 +103,7 @@ const Demo = () => {
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
+        Or <a href="">register now!</a>
       </Form.Item>
     </Form>
   );

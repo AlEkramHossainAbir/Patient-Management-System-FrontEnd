@@ -8,6 +8,9 @@ import Ribbon from "antd/lib/badge/Ribbon";
 import Footer from "./Footer";
 const { Search } = Input;
 
+// if (localStorage.hasOwnProperty("me") && localStorage.hasOwnProperty("token")) {
+//   alert("Everything is ok");
+// }
 const suffix = (
   <AudioOutlined
     style={{
@@ -79,23 +82,29 @@ export default class Header extends React.Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  About Us
+                  About
                 </a>
                 <div
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <a className="dropdown-item" href="#">
+                  {/* <a className="dropdown-item" href="#">
                     Our Team
                   </a>
                   <a className="dropdown-item" href="#">
                     Project Purpose
                   </a>
-                  <a className="dropdown-item" href="../conditions">
+                  <a className="dropdown-item" href="#">
                     Resources
+                  </a> */}
+                  <a className="dropdown-item" href="../conditions">
+                    Diseases
                   </a>
                   <a className="dropdown-item" href="../treatment">
                     Treatment
+                  </a>
+                  <a className="dropdown-item" href="../advice">
+                    Advice
                   </a>
                   <a className="dropdown-item" href="#">
                     Mission & Vision

@@ -4,7 +4,7 @@ class Treatment extends Component {
   render() {
     return (
       <section className="container-condition">
-        <div className="conditions">
+        <div className="treatment">
           <div className="featured-message">
             <h2>Treatments</h2>
           </div>
