@@ -15,9 +15,9 @@ class Conditions extends Component {
             </h2>
             <div className="disease">
               <h2>Cancer</h2>
-              <a href="#">Breast</a>,<a href="#"> Lungs</a>,
-              <a href="#"> Liver</a>,<a href="#"> Prostate</a>,
-              <a href="#"> Thyroide</a>
+              <a href="/disease/cancer/breastCancer">Breast</a>,
+              <a href="#"> Lungs</a>,<a href="#"> Liver</a>,
+              <a href="#"> Prostate</a>,<a href="#"> Thyroide</a>
             </div>
             <div className="disease">
               <h2>Eye, Ear, Nose and Throat </h2>

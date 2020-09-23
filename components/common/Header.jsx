@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
+// import Login from "../auth/Login";
 import { Button, Tooltip } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
@@ -8,9 +9,6 @@ import Ribbon from "antd/lib/badge/Ribbon";
 import Footer from "./Footer";
 const { Search } = Input;
 
-// if (localStorage.hasOwnProperty("me") && localStorage.hasOwnProperty("token")) {
-//   alert("Everything is ok");
-// }
 const suffix = (
   <AudioOutlined
     style={{
@@ -22,6 +20,37 @@ const suffix = (
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      me: {},
+      token: null,
+      isLoggedIn: false,
+    };
+  }
+
+  async componentDidMount() {
+    // if (
+    //   localStorage.hasOwnProperty("me") &&
+    //   localStorage.hasOwnProperty("token")
+    // ) {
+    //   const me = localStorage.me;
+    //   const token = localStorage.token;
+    //   this.setState({ me: me, token: token, isLoggedIn: true });
+    // }
+    if (
+      localStorage.hasOwnProperty("me") &&
+      localStorage.hasOwnProperty("token")
+    ) {
+      console.warn("Checking");
+    } else {
+      console.warn("No User Found");
+    }
+  }
+  async componentDidUpdate(prevProps, prevState) {
+    console.warn("update", prevState.me, "yo ", this.state.me);
+    // if (prevState.me !== this.state.me) {
+    //   const { me, token } = this.state;
+    //   this.updateServiceListing(me, token);
+    // }
   }
 
   render() {
@@ -111,7 +140,7 @@ export default class Header extends React.Component {
                   </a>
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -134,12 +163,29 @@ export default class Header extends React.Component {
                     Direction
                   </a>
                 </div>
-              </li>
+              </li> */}
               <li className="nav-item">
-                <a className="nav-link" href="/auth/login">
-                  Login
+                <a className="nav-link" href="/appointment">
+                  AppointMent
                 </a>
               </li>
+
+              {!this.isLoggedIn && (
+                <li className="nav-item">
+                  <a className="nav-link" href="/auth/login">
+                    Login
+                  </a>{" "}
+                </li>
+              )}
+
+              {this.isLoggedIn && (
+                <li className="nav-item">
+                  <a className="nav-link" href="/auth/login">
+                    LogOut
+                  </a>{" "}
+                </li>
+              )}
+
               <li className="nav-item">
                 <a className="nav-link" href="/auth/register" target="_blank">
                   Registration

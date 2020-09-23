@@ -54,6 +54,7 @@ const RegistrationForm = () => {
     console.log("Received values of form: ", values);
     let authService = await accountRegistration(values);
     console.log("Auth Service", authService);
+    window.location.href = "/auth/login";
   };
 
   const prefixSelector = (
@@ -69,20 +70,6 @@ const RegistrationForm = () => {
   );
   const [autoCompleteResult, setAutoCompleteResult] = useState([]);
 
-  const onWebsiteChange = (value) => {
-    if (!value) {
-      setAutoCompleteResult([]);
-    } else {
-      setAutoCompleteResult(
-        [".com", ".org", ".net"].map((domain) => `${value}${domain}`)
-      );
-    }
-  };
-
-  const websiteOptions = autoCompleteResult.map((website) => ({
-    label: website,
-    value: website,
-  }));
   return (
     <Form
       style={{ width: "50%", marginLeft: "200px", paddingTop: "10rem" }}

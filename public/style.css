@@ -451,3 +451,14 @@ tr {
 .content-advice img {
   height: 15rem;
 }
+.appoint-section {
+  background-color: #5f9ea0;
+}
+.appoint {
+  width: 400px;
+  text-align: center;
+  margin-left: 400px;
+}
+.cancer {
+  margin-left: 10rem;
+}

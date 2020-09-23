@@ -7,6 +7,12 @@ module.exports = {
       data: params,
     });
   },
+  // doctorAppointment: async function (params) {
+  //   return request("/entrance/docAppointment", {
+  //     method: "POST",
+  //     date: params,
+  //   });
+  // },
   accountLogin: async function (params) {
     return request("/auth/login", {
       method: "PUT",

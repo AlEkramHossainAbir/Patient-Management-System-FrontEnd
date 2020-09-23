@@ -103,7 +103,7 @@ const Demo = () => {
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
-        Or <a href="">register now!</a>
+        Or <a href="/auth/register">register now!</a>
       </Form.Item>
     </Form>
   );

@@ -58,10 +58,10 @@ class SiderDemo extends React.Component {
               <Breadcrumb.Item>Abir</Breadcrumb.Item>
             </Breadcrumb>
             <div
-              className="site-layout-background"
+              // className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              This is Dashboard
+              <img src="/image/robin.jpg"></img>
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>footer part</Footer>
