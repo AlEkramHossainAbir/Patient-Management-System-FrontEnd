@@ -28,29 +28,51 @@ export default class Header extends React.Component {
   }
 
   async componentDidMount() {
-    // if (
-    //   localStorage.hasOwnProperty("me") &&
-    //   localStorage.hasOwnProperty("token")
-    // ) {
-    //   const me = localStorage.me;
-    //   const token = localStorage.token;
-    //   this.setState({ me: me, token: token, isLoggedIn: true });
-    // }
     if (
       localStorage.hasOwnProperty("me") &&
       localStorage.hasOwnProperty("token")
     ) {
-      console.warn("Checking");
-    } else {
+      const me = localStorage.me;
+      const token = localStorage.token;
+      this.setState({ me: me, token: token, isLoggedIn: true });
+    }
+    // if (
+    //   localStorage.hasOwnProperty("me") &&
+    //   localStorage.hasOwnProperty("token")
+    // ) {
+    //   console.warn("Checking");
+    // } 
+    else {
       console.warn("No User Found");
     }
   }
   async componentDidUpdate(prevProps, prevState) {
-    console.warn("update", prevState.me, "yo ", this.state.me);
+    // console.warn("update", prevState.me, "yo ", this.state.me);
+    const previousState = await prevState.me;
+    const currentState = this.state.me;
+    console.warn("updated ", previousState, "yo ", currentState);
+
+    // const data = await someAPICall();
     // if (prevState.me !== this.state.me) {
-    //   const { me, token } = this.state;
-    //   this.updateServiceListing(me, token);
+    //   this.setState({
+    //     me: this.state.me,
+    //     token: this.state.token,
+    //     isLoggedIn: this.state.true,
+    //   });
     // }
+    if (this.state.me != prevState.me) {
+      prevState.setState({
+        me: me,
+        token: token,
+        isLoggedIn: true,
+      });
+    }
+  }
+
+  logOut=()=>{
+    localStorage.removeItem("me")
+    localStorage.removeItem("token");
+    this.setState({isLoggedIn:false,me:{},token:null});
   }
 
   render() {
@@ -133,7 +155,7 @@ export default class Header extends React.Component {
                     Treatment
                   </a>
                   <a className="dropdown-item" href="../advice">
-                    Advice
+                    Forum
                   </a>
                   <a className="dropdown-item" href="#">
                     Mission & Vision
@@ -164,36 +186,57 @@ export default class Header extends React.Component {
                   </a>
                 </div>
               </li> */}
-              <li className="nav-item">
-                <a className="nav-link" href="/appointment">
-                  AppointMent
-                </a>
-              </li>
 
-              {!this.isLoggedIn && (
+              {!this.state.isLoggedIn ?
+               (
                 <li className="nav-item">
                   <a className="nav-link" href="/auth/login">
                     Login
                   </a>{" "}
                 </li>
-              )}
+              ) :   <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Abir
+              </a>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a className="dropdown-item" href="../conditions">
+                  View Profile
+                </a>
+                <a className="dropdown-item" href="/appointment">
+                  AppointMent
+                </a>
+                <a className="dropdown-item" href="auth/doctorRegistration">
+                  Add Doctor
+                </a>
+                <a className="dropdown-item" href="#" onClick={this.logOut} >
+                  LogOut
+                </a>
+              </div>
+            </li>} 
 
-              {this.isLoggedIn && (
+              {/* {this.state.isLoggedIn && (
                 <li className="nav-item">
                   <a className="nav-link" href="/auth/login">
                     LogOut
                   </a>{" "}
                 </li>
-              )}
+              )} */}
 
-              <li className="nav-item">
-                <a className="nav-link" href="/auth/register" target="_blank">
-                  Registration
-                </a>
-              </li>
+  
               <Search
                 className="search"
-                style={{ float: "right", width: "25%" }}
+                style={{ float: "right", width: "40%" }}
                 placeholder="input search text"
                 enterButton="Search"
                 size="large"

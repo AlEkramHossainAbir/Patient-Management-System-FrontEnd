@@ -43,7 +43,7 @@ const Demo = () => {
     } else if (resMsg == "Username not found") {
       Modal.error({
         title: "This is an error message",
-        content: "Username not found",
+        content: "Username not found, Register Yourself",
       });
     } else {
       Modal.error({

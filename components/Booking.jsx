@@ -1,8 +1,9 @@
-import { Form, Input, InputNumber, Button } from "antd";
+import { Form, Input, InputNumber, Button, Select,DatePicker, Space, TimePicker  } from "antd";
 import { doctorAppointment } from "../services/authService";
-import { TimePicker } from "antd";
 import moment from "moment";
-import { DatePicker, Space } from "antd";
+
+
+const { Option } = Select;
 
 function onChangeDate(date, dateString) {
   console.log(date, dateString);
@@ -31,6 +32,9 @@ const validateMessages = {
 };
 
 const Booking = () => {
+  const handleChange=(value)=> {
+    console.log(`selected ${value}`);
+  }
   const onFinish = async (values) => {
     console.log("Received values of form: ", values);
     // let authServiceDoc = await doctorAppointment(values);
@@ -41,7 +45,7 @@ const Booking = () => {
     <>
       <div style={{ paddingTop: "100px", textAlign: "center" }}>
         <h1>
-          Pick A Appointment Date{" "}
+          Pick An Appointment Date{" "}
           <img
             src="/image/undraw_date_picker_gorr.svg"
             style={{ height: "100px" }}
@@ -64,8 +68,17 @@ const Booking = () => {
             },
           ]}
         >
-          <Input />
+         <Select defaultValue="lucy"  onChange={handleChange}>
+          <Option value="jack">Jack</Option>
+          <Option value="lucy">Lucy</Option>
+          <Option value="Yiminghe">yiminghe</Option>
+        </Select>
         </Form.Item>
+        {/* <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
+          <Option value="jack">Jack</Option>
+          <Option value="lucy">Lucy</Option>
+          <Option value="Yiminghe">yiminghe</Option>
+        </Select> */}
         <button
           className="btn btn-danger"
           style={{ marginLeft: "20rem", marginBottom: "2rem" }}
