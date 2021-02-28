@@ -13,6 +13,19 @@ module.exports = {
   //     date: params,
   //   });
   // },
+  doctorRegistration : async function(params){
+    return request("/doc/addDoctor",{
+      method:"POST",
+      data: params,
+    });
+  },
+  showDoctor: async function(params){
+    return request("/doc/getDoctor",{
+      method:"POST",
+      data:params,
+    })
+  },
+
   accountLogin: async function (params) {
     return request("/auth/login", {
       method: "PUT",

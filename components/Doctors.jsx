@@ -1,13 +1,46 @@
 import Header from "./common/Header";
 import React, { Component } from "react";
+import { showDoctor } from "../services/authService";
+import Axios from "axios";
 class Doctor extends Component {
-  state = {};
+
+ 
+
+
+  async show1(){
+    let showDoc =await showDoctor();
+    let card = document.getElementsByClassName('card');
+    console.log("Auth Service", showDoc);
+
+    
+    for(let i=0; i<showDoc.data.length;i++)
+    {
+      console.log("Auth Service data", showDoc.data[i].emailAddress);
+      card[i].innerHTML = showDoc.data[i].emailAddress;
+      
+    }
+   
+   
+    
+  }
+  state = {
+    
+  };
   render() {
     return (
       <section>
         <div className="container">
           <h1 className="heading">Our Doctors</h1>
           <div className="card-wrapper">
+            <div>
+              Check Show Doctor
+              <button onClick={this.show1}>SHoW</button>
+            </div>
+            <div className="card">
+     
+            </div>
+
+
             <div className="card">
               <img
                 src="/image/blood-pressure.jpg"

@@ -194,7 +194,9 @@ export default class Header extends React.Component {
                     Login
                   </a>{" "}
                 </li>
-              ) :   <li className="nav-item dropdown">
+              ) : 
+                
+              <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -216,7 +218,7 @@ export default class Header extends React.Component {
                 <a className="dropdown-item" href="/appointment">
                   AppointMent
                 </a>
-                <a className="dropdown-item" href="auth/doctorRegistration">
+                <a className="dropdown-item" href="/auth/doctorRegistration">
                   Add Doctor
                 </a>
                 <a className="dropdown-item" href="#" onClick={this.logOut} >

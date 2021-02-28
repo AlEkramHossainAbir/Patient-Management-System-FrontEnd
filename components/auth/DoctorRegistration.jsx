@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { accountRegistration } from "../../services/authService";
+import { doctorRegistration } from "../../services/authService";
 import {
   Form,
   Input,
@@ -49,12 +49,12 @@ const tailFormItemLayout = {
 
 const doctorRegistrationForm = () => {
   const [form] = Form.useForm();
-
   const onFinish = async (values) => {
     console.log("Received values of form: ", values);
-    let authService = await accountRegistration(values);
+    let authService = await doctorRegistration(values);
     console.log("Auth Service", authService);
-    window.location.href = "/auth/login";
+  
+    // window.location.href = "/doctorlist";
   };
 
   const prefixSelector = (
